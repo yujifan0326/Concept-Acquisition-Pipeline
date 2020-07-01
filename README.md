@@ -29,7 +29,7 @@ The framework of our Concept Acquisition is shown below, including:
 * (Ex.)**Word Bag Generation**: Provide more information about concepts by generating its contextual words.
 * (Ex.)**Concept Classification**: Further classify whether a concept belongs to the target domain using snippets from Search Engines.
 
-![pipeline](https://github.com/yujifan0326/Concept-Acquisition-Pipeline/blob/master/pipeline.png)
+![N7rBB8.png](https://s1.ax1x.com/2020/07/01/N7rBB8.png)
 
 ## 环境要求/Enviroment Requirement
 
