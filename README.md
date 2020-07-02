@@ -195,6 +195,10 @@ python rerank.py
 
 Ranking results and evaluation (To be designed by Yuquan).
 
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| rerank           | 0.180   | 0.146   | 0.370 | 0.340 |
+
 ## 通过聚类方法重新评估候选概念/Rerank of expanded concept based on Clustering
 
 Clusters annotation cost less human workload than concepts annotation. This tool use k-means method with cosine distance to cluster word vectors of expanded concepts.
@@ -228,6 +232,10 @@ python clustering.py
 ### Evaluation
 
 Ranking results and evaluation (To be designed by Yuquan).
+
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| cluster          | 0.181   | 0.143   | 0.370 | 0.335 |
 
 ## 补充：词袋生成工具/EX: Word bag generation
 
