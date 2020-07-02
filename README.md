@@ -71,11 +71,16 @@ None: Extract Chinese concepts need setting language as 'zh', while English 'en'
 
 The evaluation is conducted on an running example of "Data Structure & Algorithms", we record our annotation results for evaluation, and the results are listed below.  Sum of high-quality concepts: **XXX**.
 
-| 评测范围(Range) | Accuracy | Example |
-| --------------- | -------- | ------- |
-|                 |          |         |
-|                 |          |         |
-|                 |          |         |
+```
+python evaluation.py --config
+```
+
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| average_distance | 0.079   | 0.083   | 0.280 | 0.295 |
+| graph_prop       | 0.038   | 0.027   | 0.160 | 0.135 |
+| pagerank         | 0.010   | 0.018   | 0.130 | 0.155 |
+| tf_idf           | 0.115   | 0.095   | 0.300 | 0.285 |
 
 You can edit the output file before next step, to get a better final result.
 
@@ -137,14 +142,15 @@ python xlink.py
 ```
 ### Evaluation
 
+```
+python evaluation.py --config
+```
+
 The evaluation of Entity Linking is also conducted on "Data Structure and Algorithm". After this step, we get xxx concepts from xxx web pages.
 
-| 评测范围(Range) | 准确度Accuracy |
-| --------------- | -------------- |
-|                 |                |
-
-
-
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| xlink            | 0.428   | 0.338   | 0.620 | 0.525 |
 
 
 ## ⑤ 交叉验证/Cross Validation
@@ -189,6 +195,10 @@ python rerank.py
 
 Ranking results and evaluation (To be designed by Yuquan).
 
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| rerank           | 0.180   | 0.146   | 0.370 | 0.340 |
+
 ## 通过聚类方法重新评估候选概念/Rerank of expanded concept based on Clustering
 
 Clusters annotation cost less human workload than concepts annotation. This tool use k-means method with cosine distance to cluster word vectors of expanded concepts.
@@ -222,6 +232,10 @@ python clustering.py
 ### Evaluation
 
 Ranking results and evaluation (To be designed by Yuquan).
+
+| algorithm        | mAP@100 | mAP@200 | p@100 | p@200 |
+| ---------------- | ------- | ------- | ----- | ----- |
+| cluster          | 0.181   | 0.143   | 0.370 | 0.335 |
 
 ## 补充：词袋生成工具/EX: Word bag generation
 
