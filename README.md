@@ -44,9 +44,14 @@ Python >= 3.5, Tensorflow >= 1.10
 
 ### Format of input files
 - **context_file:** unstractured natural language context. 
+```
+在数据通信中，一个物理网络节点可以是数据电路端接设备（DCE），如调制解调器、集线器、桥接器或交换机；也可以是一个数据终端设备（DTE），如数字手机，打印机或主机（例如路由器、工作站或服务器）。
+```
 - **seeds:** Each single line contains an unique concept.
-
-`给个例子哈`
+```
+数据
+调制解调器
+```
 
 ### Format of output file
 - **extraction result:** Each single line contains a json-format text with "name"(name of the concept) and "score"(confidence score of relation with seeds)
@@ -215,6 +220,7 @@ Clusters annotation cost less human workload than concepts annotation. This tool
 {"name": "选择排序", "freq": 53, "score": 0.8094679713249207, "R": 3.2138241408307735, "cluster": 1}
 ```
 ### Usage
+Before running the program, it is required to download word vector from https://pan.baidu.com/s/1Gndr0fReIq_oJ3R34CxlPg, and unzip the file into "word_clustering\word_vectors".
  ```
 num_clusters = 100 # number of clusters for all expanded concepts
 num_seed_clusters = 10 # number of clusters for seeds
