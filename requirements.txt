@@ -1,1 +1,6 @@
-numpy
+jieba
+requests
+bs4
+nltk
+bert-serving-server
+bert-serving-client
